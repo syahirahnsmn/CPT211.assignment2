@@ -1,4 +1,7 @@
-<style>
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
@@ -24,14 +27,21 @@ li{
     margin: 0 1vw;
 }
 
+#imgtop{
+    width:1.5vw; 
+    height:1.5vw;
+}
+
 #topbtn{
+    cursor: pointer;
+    display: none;
     position: fixed;
-    z-index: 100;
+    z-index: 99;
     margin: 0;
     padding: 1vw;
     bottom: 1vw;
     right: 1vw;
-    background-color: #1b1514;
+    background-color: transparent;
     color: white;
     border-radius: 10px 10px 10px 10px;
     font-size: 1vw;
@@ -64,24 +74,29 @@ li{
 
 a.linkNav{
     text-decoration: none;
-    display: flex;
+    display: inline-block;
     margin: 0.5vw;
     padding: 1vw;
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    font-size: 1.4vw;
     color: #ffffff;
-    border-bottom: 5px solid transparent;
     zoom: 1;
-    transition-delay: 50ms;
-    transition-duration: 250ms;
-    transition-property: all;
 }
 
-a.linkNav:hover{
-    border-bottom: 5px solid #ffffff;
-    transition-delay: 50ms;
+a.linkNav::after{
+    width: 0;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0.2vw;
+    background: #ffffff;
+    transition-delay: 40ms;
+    transition-property: width;
     transition-duration: 250ms;
-    transition-property: all;
+}
+
+a.linkNav:hover::after{
+    width: 100%;
 }
 /*end of navbar styling*/
 
@@ -89,7 +104,7 @@ a.linkNav:hover{
     margin: 0;
     padding: 0;
     width: 25vw; 
-    height:4.5vw;" 
+    height:4.5vw;
 }
 
 button{
@@ -110,7 +125,7 @@ button{
     margin-top: -10px;
     margin-left: -10px;
     padding: 0;
-    top: 0%
+    top: 0%;
     bottom: 0%;
     left: 0%;
     right: 0%;
@@ -134,7 +149,7 @@ a.linkhdr{
     display: inline-block;
     padding: 1vw;
     margin: 0;
-    font-size: 18px;
+    font-size: 1.4vw;
     color: #000000;
     background-color: #e9d8f2;
 }
@@ -166,7 +181,7 @@ a.linkhdr:hover{
     padding: 2.5vw;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
+    font-size: 1.4vw;
     color: #10110f;
     line-height: 3vw;
 }
@@ -264,6 +279,7 @@ a.linkhdr:hover{
     position: relative;
     padding: 1vw;
     background-color: #f8f8f8;
+    font-size: 1.4vw;
     border: 1px solid #352f2e;
     border-top: 10px solid #9e6666;
     display: inline-block;
@@ -280,7 +296,7 @@ a.linkhdr:hover{
 
 /*end of section styling*/
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 800px){
 ul{
     margin: 0;
     padding: 0;
@@ -293,9 +309,11 @@ li{
     padding: 1vw;
 }
 
-#topbtn{
-    font-size: 2vw;
+#imgtop{
+    width:2.5vw; 
+    height:2.5vw;
 }
+
 
 
 /*navbar styling*/
@@ -307,14 +325,13 @@ li{
 #logo{
     margin-top:1.1vw;
     width: 25vw; 
-    height:4.5vw;" 
+    height:4.5vw;
 }
-
 
 a.linkNav{
     display: flex;
     color: #fff;
-    font-size: 10px;
+    font-size: 1.5vw;
     padding: 1vw;
     margin: 0;
 }
@@ -337,7 +354,7 @@ a.linkNav{
 /*section styling*/
 #section1{
     padding: 1vw;
-    font-size: 11px;
+    font-size: 1.4vw;
 }
 
 .stitle{
@@ -345,8 +362,8 @@ a.linkNav{
 }
 
 .stxt{
-    font-size: 15px;
-    line-height: 6vw;
+    font-size: 2.4vw;
+    line-height: 4vw;
 }
 
 .content{
@@ -361,12 +378,12 @@ a.linkNav{
     display: flex;
     left: 7vw;
     width: 70vw;
-    height: 55vw;
+    height: 60vw;
 }
 
 .imgsz{
     width: 70vw;
-    height: 55vw;
+    height: 60vw;
 }
 
 .imgtxt{
@@ -374,4 +391,3 @@ a.linkNav{
 }
 /*end of section styling*/
 } /*end of media screen*/
-</style>

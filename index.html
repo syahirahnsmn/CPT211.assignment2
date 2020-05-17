@@ -5,12 +5,16 @@
 <title> C++ As Multiparadigm </title>
 <link rel="stylesheet" href="main.css"></link>
 <link rel="icon" href="https://i.imgur.com/q1oSQuQ.png" type="image/gif" sizes="16x16">
+
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Courier+Prime&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <!-- top button -->
+<button onclick="topscroll()" id="topbtn" title="Go to top">
+<img id="imgtop" src="https://i.ya-webdesign.com/images/black-up-arrow-png-8.png">
+</button>
 
 <!-- beginning of header -->
 <div id="header">
@@ -99,18 +103,17 @@
 
 </div>
 <!-- end of section 1 -->
+
+<!-- javascript -->
 <script src="topbtn.js"></script>
-<script>
-    window.onscroll = function() {navscroll()};
-    function navscroll() {
-      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        document.getElementById("navbar").style.padding = "0vw";
-        document.getElementById("navbar").style.backgroundColor = "#bb89b2";
-      } else {
-        document.getElementById("navbar").style.padding = "1.5vw";
-        document.getElementById("navbar").style.backgroundColor = "transparent";
-      }
-    }
+<script type="text/javascript">
+    topscroll();
 </script>
+
+<script src="navbar.js"></script>
+<script type="text/javascript">
+    navscroll();
+</script>
+<!-- javascript -->
 </body>
 </html>
