@@ -3,6 +3,8 @@ html{
 }
 
 body{
+    display: flex;
+    flex-direction: column;
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
     color: #10110f;
@@ -113,8 +115,8 @@ button{
 
 /*header styling*/
 #header{
-    background-image: url('https://i.imgur.com/upfekuQ.png');
     position: relative;
+    background-image: url('https://i.imgur.com/upfekuQ.png');
     height: 70vw;
     width: 100vw;
     background-attachment: fixed;
@@ -123,11 +125,10 @@ button{
     background-size: cover;
     margin: 0;
     margin-top: -10px;
-    margin-left: -10px;
     padding: 0;
     top: 0%;
     bottom: 0%;
-    left: 0%;
+    left: -0.6vw;
     right: 0%;
 }
 
@@ -170,10 +171,11 @@ a.linkhdr:hover{
     text-transform: uppercase;
     font-family: 'Open Sans',sans-serif;
     font-size: 60px;
-    color: #2c2e2b;
+    color: #000000;
+    background-color: transparent;
     letter-spacing: 1vw;
     text-align: center;
-    border: 1px solid #2c2e2b;
+    border: 1px solid #000000;
 }
 
 .stxt{
@@ -186,27 +188,44 @@ a.linkhdr:hover{
     line-height: 3vw;
 }
 
-#section1{
+#section{
+    position: relative;
     margin: 0;
-    margin-left:0;
-    padding: 2vw;
-    width: 100%;
+    padding: 0;
+    padding-bottom: 5vw;
+    left: -0.6vw;
+    width: 100vw;
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
+}
+
+#section1{
+    background-color: #ecd7dc;
+}
+
+#section1sub{
+    margin: 0;
+    padding: 0;
+    background-color: #c5a9c3;
+}
+
+#section2{
+    background-color: #d5dddc;
+
+}
+
+#section3{
     background-color: #f4e7f7e1;
-    text-align: justify;
-    transition-delay: 50ms;
-    transition-duration: 250ms;
-    transition-property: all;
 }
 
 .sectionbox{
-    background-color: #f8f8f8;
+    background-color: transparent;
     box-shadow: 2px 4px 10px #e0dfdf;
     border-radius:0px 0px 0px 0px;
     margin: 0;
     margin-top: 2vw;
     margin-left: 10vw;
+    margin-bottom: 2vw;
     padding: 0vw;
     padding-bottom: 4vw;
     display: inline-table;
@@ -214,6 +233,7 @@ a.linkhdr:hover{
     height: 25vw;
     line-height: 2vw;
     vertical-align: top;
+    text-align: justify;
 }
 
 .imgbox{
@@ -239,6 +259,17 @@ a.linkhdr:hover{
     opacity: 1.0;
     box-shadow: 3px 5px 15px #c0bebe;
 }
+
+.imgbox3{
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    padding: 0;
+    width: 45vw;
+    left: 5vw;
+}
+
+
 
 .imgef{
     position: absolute;
@@ -278,7 +309,7 @@ a.linkhdr:hover{
     margin-left: 2vw;
     position: relative;
     padding: 1vw;
-    background-color: #f8f8f8;
+    background-color: transparent;
     font-size: 1.4vw;
     border: 1px solid #352f2e;
     border-top: 10px solid #9e6666;
@@ -293,6 +324,31 @@ a.linkhdr:hover{
 .content:hover{
     border-top: 10px solid #bb89b2;
 }
+
+/*footer styling*/
+
+#footer {
+    flex: 1;
+    position: absolute;
+    padding: 0;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    margin-top: auto;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    background-color:  rgb(187, 137, 178);
+  
+}
+
+.footertxt {
+   text-align: center;
+   font-size: 12px;
+   color: white;
+}
+
+/*end of footer styling*/
 
 /*end of section styling*/
 
@@ -329,11 +385,26 @@ li{
 }
 
 a.linkNav{
-    display: flex;
+    display: inline-block;
     color: #fff;
     font-size: 1.5vw;
-    padding: 1vw;
+    padding: 2vw;
     margin: 0;
+}
+a.linkNav::after{
+    width: 0;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0.1vw;
+    background: #ffffff;
+    transition-delay: 40ms;
+    transition-property: width;
+    transition-duration: 250ms;
+}
+
+a.linkNav:hover::after{
+    width: 100%;
 }
 /*end of navbar styling*/
 
@@ -352,10 +423,6 @@ a.linkNav{
 /*end of header styling*/
 
 /*section styling*/
-#section1{
-    padding: 1vw;
-    font-size: 1.4vw;
-}
 
 .stitle{
     font-size: 40px;
@@ -365,6 +432,11 @@ a.linkNav{
     font-size: 2.4vw;
     line-height: 4vw;
 }
+    
+.stxt1{
+    font-size: 3.4vw;
+    line-height: 4vw;
+}    
 
 .content{
     display: block;
@@ -390,4 +462,5 @@ a.linkNav{
     font-size: 3vw;
 }
 /*end of section styling*/
+   
 } /*end of media screen*/
